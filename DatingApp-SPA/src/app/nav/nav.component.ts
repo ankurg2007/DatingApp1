@@ -16,7 +16,7 @@ login() {
   this.authservice.login(this.model).subscribe(next => {
     console.log('logged in successfully');
   }, error => {
-     console.log('Failed to login');
+     console.log(error);
 });
  }
 loggedIn() {
@@ -24,7 +24,7 @@ const token = localStorage.getItem('token');
 return !!token;
 }
 
-logout(){
+logout() {
 
 localStorage.removeItem('token');
 console.log('logged out');
